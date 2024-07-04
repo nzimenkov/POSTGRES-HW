@@ -31,7 +31,7 @@ sudo docker network create pg-net
 
 -- 2. подключаем созданную сеть к контейнеру сервера Postgres:
 ```sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -v /var/lib/postgres:/var/lib/postgresql/data postgres:15```
-
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW01/создание%20SSH%20ключа.png)
 E:\Помойка\OTUS\домашки\HW2\1.png
 
 > развернуть контейнер с клиентом postgres
