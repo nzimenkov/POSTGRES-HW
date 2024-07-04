@@ -31,8 +31,8 @@ sudo docker network create pg-net
 
 -- 2. подключаем созданную сеть к контейнеру сервера Postgres:
 ```sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -v /var/lib/postgres:/var/lib/postgresql/data postgres:15```
-![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW01/создание%20SSH%20ключа.png)
-E:\Помойка\OTUS\домашки\HW2\1.png
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW02/1.png)
+
 
 > развернуть контейнер с клиентом postgres
 
@@ -45,20 +45,20 @@ E:\Помойка\OTUS\домашки\HW2\1.png
 ```INSERT INTO learning (id, title) VALUES (1, '1');```
     
 ```INSERT INTO learning (id, title) VALUES (2, '2');```
-E:\Помойка\OTUS\домашки\HW2\2.png
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW02/2.png)
 
 > удалить контейнер с сервером
-E:\Помойка\OTUS\домашки\HW2\3.png
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW02/3.png)
 
 При попытке создать новый контейнер выскакивает ошибка
- E:\Помойка\OTUS\домашки\HW2\4.png
+ ![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW02/4.png)
 
 Убиваем действующий процесс
-  E:\Помойка\OTUS\домашки\HW2\5.png
+ ![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW02/5.png)
 
 > создать его заново
  sudo docker run --name pg-server --network pg-net -e POSTGRES_PASSWORD=postgres -d -v /var/lib/postgres:/var/lib/postgresql/data postgres:15
-  E:\Помойка\OTUS\домашки\HW2\6.png
+  ![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW02/6.png)
   
 > Проверяем что все осталось на месте
- E:\Помойка\OTUS\домашки\HW2\7.png
+ ![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW02/7.png)
