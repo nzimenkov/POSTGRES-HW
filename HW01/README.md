@@ -10,7 +10,7 @@
 Добавляем свой ssh ключ
 `ssh-keygen -t rsa`
 E:\Помойка\OTUS\домашки\HW1\создание SSH ключа.png
-![alt text](https://raw.githubusercontent.com//nzimenkov/POSTGRES-HW/blob/OTUS/HW01/создание%20SSH%20ключа.png)
+![alt text](https://raw.githubusercontent.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW01/создание%20SSH%20ключа.png)
 
 > зайти удаленным ssh (первая сессия), не забывайте про ssh-add
 > поставить PostgreSQL
