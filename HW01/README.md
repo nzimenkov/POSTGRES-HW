@@ -10,6 +10,7 @@
 Добавляем свой ssh ключ
 `ssh-keygen -t rsa`
 E:\Помойка\OTUS\домашки\HW1\создание SSH ключа.png
+![alt text](https://raw.githubusercontent.com/username/projectname/commit/img.png)
 
 > зайти удаленным ssh (первая сессия), не забывайте про ssh-add
 > поставить PostgreSQL
@@ -25,10 +26,12 @@ E:\Помойка\OTUS\домашки\HW1\создание SSH ключа.png
 
 запускаем везде psql под пользователем postgres. В первой сессии создаем таблицу и вносим в нее данные
 E:\Помойка\OTUS\домашки\HW1\2.png
+![alt text](https://raw.githubusercontent.com/username/projectname/commit/img.png)
 
 > посмотреть текущий уровень изоляции: show transaction isolation level
 E:\Помойка\OTUS\домашки\HW1\3.png
-
+![alt text](https://raw.githubusercontent.com/username/projectname/commit/img.png)
+> 
 > начать новую транзакцию в обоих сессиях с дефолтным (не меняя) уровнем изоляции
 > в первой сессии добавить новую запись insert into persons(first_name, second_name) values('sergey', 'sergeev')
 Делаем в первой сессии insert
