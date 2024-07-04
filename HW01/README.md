@@ -9,7 +9,6 @@
 `sudo apt install openssh-server -y`
 Добавляем свой ssh ключ
 `ssh-keygen -t rsa`
-E:\Помойка\OTUS\домашки\HW1\создание SSH ключа.png
 ![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW01/создание%20SSH%20ключа.png)
 
 
@@ -26,12 +25,10 @@ E:\Помойка\OTUS\домашки\HW1\создание SSH ключа.png
 > сделать в первой сессии новую таблицу и наполнить ее данными create table persons(id serial, first_name text, second_name text); insert into persons(first_name, second_name) values('ivan', 'ivanov'); insert into persons(first_name, second_name) values('petr', 'petrov'); commit;
 
 запускаем везде psql под пользователем postgres. В первой сессии создаем таблицу и вносим в нее данные
-E:\Помойка\OTUS\домашки\HW1\2.png
-![alt text](https://raw.githubusercontent.com/username/projectname/commit/img.png)
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW01/2.png)
 
 > посмотреть текущий уровень изоляции: show transaction isolation level
-E:\Помойка\OTUS\домашки\HW1\3.png
-![alt text](https://raw.githubusercontent.com/username/projectname/commit/img.png)
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW01/3.png)
 > 
 > начать новую транзакцию в обоих сессиях с дефолтным (не меняя) уровнем изоляции
 > в первой сессии добавить новую запись insert into persons(first_name, second_name) values('sergey', 'sergeev')
