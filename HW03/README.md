@@ -13,11 +13,11 @@
 
 > проверьте что кластер запущен через sudo -u postgres pg_lsclusters
 
-КАРТИНКА E:\Помойка\OTUS\домашки\HW3\1.png
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW03/1.png)
 
 > зайдите из под пользователя postgres в psql и сделайте произвольную таблицу с произвольным содержимым
 
-КАРТИНКА E:\Помойка\OTUS\домашки\HW3\2.png
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW03/2.png)
 
 
 > остановите postgres например через sudo -u postgres pg_ctlcluster 15 main stop
@@ -28,7 +28,7 @@
 > создайте новый диск к ВМ размером 10GB
 > добавьте свеже-созданный диск к виртуальной машине - надо зайти в режим ее редактирования и дальше выбрать пункт attach existing disk
 
-КАРТИНКА E:\Помойка\OTUS\домашки\HW3\.3png
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW03/3.png)
 
 > добавьте свеже-созданный диск к виртуальной машине - надо зайти в режим ее редактирования и дальше выбрать пункт attach existing disk
 > проинициализируйте диск согласно инструкции и подмонтировать файловую систему, только не забывайте менять имя диска на актуальное, в вашем случае это скорее всего будет /dev/sdb - https://www.digitalocean.com/community/tutorials/how-to-partition-and-format-storage-devices-in-linux
@@ -62,5 +62,5 @@ Error: /var/lib/postgresql/15/main is not accessible or does not exist
 в /etc/postgresql/15/main/postgresql.conf ставим  data_directory = '/mnt/data/15/main/'
 
 Проверяем 
-E:\Помойка\OTUS\домашки\HW3\.4png
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW03/4.png)
 
