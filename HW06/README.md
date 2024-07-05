@@ -7,34 +7,36 @@
 ```select setting from pg_settings where name='checkpoint_timeout';```
 ```sudo pg_ctlcluster 16 main restart```
 
-![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW03/1.png)
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/1.png)
 
 > 10 минут c помощью утилиты pgbench подавайте нагрузку.
 
 Определяем количество выполненных контрольных точек
 
-Помойка 2
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/2.png)
+
 pg_current_wal_insert_lsn = 0/152D958
-Помойка 3
+
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/3.png)
 
 
 ```pgbench -i postgres```
 
 ```pgbench -c 8 -P 60 -T 600 -U postgres postgres```
 
-ПОМОЙКА 4
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/4.png)
 
 
 Вновь определяем количество выпоненых точек
 
-ПОМОЙКА 5
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/5.png)
 pg_current_wal_insert_lsn = 0/23A77F00
 
 > Измерьте, какой объем журнальных файлов был сгенерирован за это время. Оцените, какой объем приходится в среднем на одну контрольную точку.
 
 ```SELECT pg_size_pretty('0/152D958'::pg_lsn - '0/23A77F00'::pg_lsn) wal_size;```
  
- ПОМОЙКА 6
+ ![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/6.png)
  на одну контрольную точку ~27.5 MB
 
 >Проверьте данные статистики: все ли контрольные точки выполнялись точно по расписанию. Почему так произошло?
@@ -95,20 +97,20 @@ tail -n 50 /var/log/postgresql/postgresql-16-main.log | grep checkpoint
 
 Синхронный режим:
 ```show synchronous_commit;```
-ПОМОЙКА 7
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/7.png)
 
 ``` pgbench -c8 -P 60 -T 600 postgres```
 
-ПОМОЙКА 8
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/8.png)
 
 Асинхронный режим:
 ```ALTER SYSTEM SET synchronous_commit = off;```
 
 ```SELECT pg_reload_conf();```
 
-ПОМОЙКА 9
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/9.png)
 
-ПОМОЙКА 10
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/10.png)
 
 В асинронном режиме увеличелось tps в 2 раза. Асинхронный режим обеспечил высокую производительность по количеству транзакций.
 
@@ -126,8 +128,8 @@ insert into otus values ('c');
 ```
 
 Расположение таблицы:
-ПОМОЙКА 11
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/11.png)
 
 Делаем select
 
-ПОМОЙКА 12
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW06/12.png)
