@@ -53,6 +53,7 @@ autovacuum_vacuum_cost_limit = 500
 ```   sudo systemctl restart postgresql```
 
 > Применить параметры настройки PostgreSQL из прикрепленного к материалам занятия файла
+> 
 > Протестировать заново
 
 ![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW05/3.png)
@@ -65,9 +66,11 @@ autovacuum_vacuum_cost_limit = 500
 > Создать таблицу с текстовым полем и заполнить случайными или сгенерированными данным в размере 1млн строк
 
 ```create table otus(id serial, nm char(100));```
+
 ```INSERT INTO otus(nm) SELECT 'n' FROM generate_series(1,1000000);```
 
 > Посмотреть размер файла с таблицей
+> 
 ```SELECT pg_size_pretty(pg_total_relation_size('otus'));```
 
 135 MB
@@ -81,10 +84,13 @@ update otus set nm = 'n1111';
 update otus set nm = 'n11111';
 update otus set nm = 'n111111';
 ```
+
 >Посмотреть количество мертвых строчек в таблице и когда последний раз приходил автовакуум
+>
 ```SELECT relname, n_live_tup, n_dead_tup, trunc(100*n_dead_tup/(n_live_tup+1))::float AS "ratio%", last_autovacuum FROM pg_stat_user_tables WHERE relname = 'otus';```
 
 n_dead_tup =  0
+
 last_autovacuum = 2024-07-05 15:49:36.420509+03
  
 ```
@@ -96,10 +102,13 @@ update otus set nm = 'n111111abcdf';
 ```
 
 > Посмотреть размер файла с таблицей
+> 
 ```SELECT pg_size_pretty(pg_total_relation_size('otus'));```
+
  pg_size_pretty = 808 MB
 
  > Отключить Автовакуум на конкретной таблице
+> 
  ```ALTER TABLE otus SET (autovacuum_enabled = false);```
 
  ```
@@ -118,9 +127,11 @@ update otus set nm = 'n111111abcdf';
 > Посмотреть размер файла с таблицей
 
 ```SELECT pg_size_pretty(pg_total_relation_size('otus'));```
+
 pg_size_pretty = 1482 MB
 
 > Объясните полученный результат
+> 
 Из-за отключенного autovacuum, растет количество dead tuple
 
 
