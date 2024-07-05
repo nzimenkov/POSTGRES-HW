@@ -105,4 +105,4 @@ pg_size_pretty = 1482 MB
 
 > Не забудьте включить автовакуум)
 
-```ALTER TABLE student SET (autovacuum_enabled = true);```
+```ALTER TABLE otus SET (autovacuum_enabled = true);```
