@@ -3,9 +3,9 @@
 > Создать инстанс ВМ с 2 ядрами и 4 Гб ОЗУ и SSD 10GB
 > Установить на него PostgreSQL 15 с дефолтными настройками
 > Создать БД для тестов: выполнить pgbench -i postgres
-Помойка 1
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW05/1.png)
 > Запустить pgbench -c8 -P 6 -T 60 -U postgres postgres
-Помойка 2
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW05/2.png)
 
 > Применить параметры настройки PostgreSQL из прикрепленного к материалам занятия файла
 
@@ -35,7 +35,7 @@ autovacuum_vacuum_cost_limit = 500
 > Применить параметры настройки PostgreSQL из прикрепленного к материалам занятия файла
 > Протестировать заново
 
-Помойка 3
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW05/3.png)
 
 > Что изменилось и почему?
 Из-за новых параметров увеличлось tps (время  затраченное на установление соединения между клиентом и сервером, а также время обработки транзакций)
