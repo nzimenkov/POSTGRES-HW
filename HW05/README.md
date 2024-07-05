@@ -3,32 +3,52 @@
 > Создать инстанс ВМ с 2 ядрами и 4 Гб ОЗУ и SSD 10GB
 > Установить на него PostgreSQL 15 с дефолтными настройками
 > Создать БД для тестов: выполнить pgbench -i postgres
+> 
 ![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW05/1.png)
 > Запустить pgbench -c8 -P 6 -T 60 -U postgres postgres
+> 
 ![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW05/2.png)
 
 > Применить параметры настройки PostgreSQL из прикрепленного к материалам занятия файла
 
 max_connections = 40
+
 shared_buffers = 1GB
+
 effective_cache_size = 3GB
+
 maintenance_work_mem = 512MB
+
 checkpoint_completion_target = 0.9
+
 wal_buffers = 16MB
+
 default_statistics_target = 500
+
 random_page_cost = 4
+
 effective_io_concurrency = 2
+
 work_mem = 6553kB
+
 min_wal_size = 4GB
+
 max_wal_size = 16GB
 
 autovacuum = on 
+
 autovacuum_vacuum_threshold = 100 
+
 autovacuum_analyze_threshold = 100
+
 autovacuum_vacuum_scale_factor = 0.5
+
 autovacuum_analyze_scale_factor = 0.2
+
 autovacuum_vacuum_cost_delay = 50
+
 autovacuum_vacuum_cost_limit = 500
+
 Перезапустим postgres
 ```   sudo systemctl restart postgresql```
 
