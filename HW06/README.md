@@ -7,7 +7,7 @@
 ```select setting from pg_settings where name='checkpoint_timeout';```
 ```sudo pg_ctlcluster 16 main restart```
 
-Помойка 1
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW03/1.png)
 
 > 10 минут c помощью утилиты pgbench подавайте нагрузку.
 
