@@ -38,6 +38,7 @@ autovacuum_vacuum_cost_limit = 500
 ![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/OTUS/HW05/3.png)
 
 > Что изменилось и почему?
+> 
 Из-за новых параметров увеличлось tps (время  затраченное на установление соединения между клиентом и сервером, а также время обработки транзакций)
 
 
