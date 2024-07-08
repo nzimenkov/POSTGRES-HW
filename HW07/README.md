@@ -35,6 +35,7 @@ Session 2:
 ```BEGIN;```
 
 ```UPDATE otus SET numb = numb + 1.00 WHERE id = 1;```
+
 Эта транзакция заблокировалась
 
 Смотрим, последние записи в логе
@@ -64,6 +65,7 @@ Session 2:
 
 
 Session 1:
+
 ```BEGIN;```
 
 ```UPDATE otus SET numb = numb - 1.00 WHERE id = 1;```
@@ -105,6 +107,7 @@ Session 3:
 Исходя из логов, Сессии 2 и 3 заблокировались:
 
 Сессия 2 заблокирована сессией 1:
+
 ``` Process holding the lock: 1368. Wait queue: 1251 ```
 
 Сессия 3 заблокированна сессией 2:
@@ -114,6 +117,7 @@ Session 3:
 Далее делаем поочередно commit с 1 по 3 сессию и смотрим лог:
 
 После коммита 1 сессии, разблокировалась 2 сессия;
+
 После коммита 2 сессии, разблокировалась 3 сессия.
 
 ```
@@ -185,6 +189,7 @@ CONTEXT:  while updating tuple (0,8) in relation "otus"
 ```
 
 Смотрим лог:
+
 ```
 2024-07-08 10:36:18.711 MSK [579] LOG:  checkpoint starting: time
 2024-07-08 10:36:18.838 MSK [579] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.108 s, sync=0.005 s, total=0.127 s; sync files=1, longest=0.005 s, average=0.005 s; distance=0 kB, estimate=81 kB; lsn=0/72BC95D8, redo lsn=0/72BC95A0
