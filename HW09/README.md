@@ -29,7 +29,7 @@ create database otus;
 > Используя утилиту pg_dump создадим бэкап в кастомном сжатом формате двух таблиц
 
 sudo -u postgres pg_dump -d otus --create -Fc > /usr/bckup/backup_dump.gz
-ПОМОЙКА 1
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW09/1.png)
 
 > Используя утилиту pg_restore восстановим в новую БД только вторую таблицу!
 
