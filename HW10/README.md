@@ -15,7 +15,7 @@
 
 ```create publication test_pub_1 for table test;```
 
-ПОМОЙКА 1
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW10/1.png)
 
 ### Как я понял задание, на ВМ 2 надо создать таблицу и создать публикацию
 
@@ -25,7 +25,7 @@
 
 ```CREATE PUBLICATION test2_pub_2 FOR TABLE test2;```
 
-ПОМОЙКА 2
+![Image alt](https://github.com/nzimenkov/POSTGRES-HW/blob/main/HW10/2.png)
 
 С ВМ 1 подписываемся на публикацию test 2 с ВМ 2
 
