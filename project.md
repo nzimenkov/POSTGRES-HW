@@ -115,16 +115,16 @@ unix_socket_group = ''                  # (change requires restart)
 unix_socket_permissions = 0777          # begin with 0 to use octal notation
                                         # (change requires restart)
 
-```
-еще строчки, которые я менял по совету сайта https://habr.com/ru/articles/506610/
 
-```
 wal_level=replica
 archive_mode = on
 archive_command = '/usr/local/bin/wal-g wal-push \"%p\" >> /var/log/postgresql/archive_command.log 2>&1'
 archive_timeout = 60
 restore_command = '/usr/local/bin/wal-g wal-fetch \"%f\" \"%p\" >> /var/log/postgresql/restore_command.log 2>&1'
 ```
+еще строчки, которые я менял по совету сайта https://habr.com/ru/articles/506610/
+
+
 
 пробуем не через unix сокет
 
