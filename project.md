@@ -32,6 +32,10 @@ export USE_LZO=1
 make deps
 make pg_build
 main/pg/wal-g --version
+
+curl -L "https://github.com/wal-g/wal-g/releases/download/v0.2.15/wal-g.linux-amd64.tar.gz" -o "wal-g.linux-amd64.tar.gz"
+tar -xzf wal-g.linux-amd64.tar.gz
+mv wal-g /usr/local/bin/
 ```
 
 Пытаемся создать файл конфигурации, по идее его можно создать где угодно,  просто нужно указать его путь при запуске команды wal-g backup-push.
@@ -48,17 +52,6 @@ sudo nano /home/user/walg.json
  /var/backups/postgresql/ - куда я буду складывать бэкапы
 
  Создаем каталог для бэкапов ``` sudo mkdir /var/backups/postgresql ```
-
-
-По всей этой залупе, wal-g все равно не настраивается, поэтому находим конманду из интернета
-
-```
-curl -L "https://github.com/wal-g/wal-g/releases/download/v0.2.15/wal-g.linux-amd64.tar.gz" -o "wal-g.linux-amd64.tar.gz"
-tar -xzf wal-g.linux-amd64.tar.gz
-mv wal-g /usr/local/bin/
-```
-
-
 
 
 ```
