@@ -128,7 +128,7 @@ restore_command = '/usr/local/bin/wal-g wal-fetch \"%f\" \"%p\" >> /var/log/post
 
 пробуем не через unix сокет
 
-
+```
    {
      "WALG_FILE_PREFIX": "/var/backups/postgresql",
      "WALG_COMPRESSION_METHOD": "brotli",
@@ -138,11 +138,13 @@ restore_command = '/usr/local/bin/wal-g wal-fetch \"%f\" \"%p\" >> /var/log/post
      "PGPORT": "5432",
      "WALG_LOCAL_PREFIX": "/var/backups/postgresql"
    }
+```
 
-Это гавно заработало, как только я раздал права на папки внутри /var/backups/postgresql
+Оно заработало, как только я раздал права на папки внутри /var/backups/postgresql
 
 конфиг в итоге сработал этот
 
+```
    {
      "WALG_FILE_PREFIX": "/var/backups/postgresql",
      "WALG_COMPRESSION_METHOD": "brotli",
@@ -152,6 +154,8 @@ restore_command = '/usr/local/bin/wal-g wal-fetch \"%f\" \"%p\" >> /var/log/post
      "WALG_LOCAL_PREFIX": "/var/backups/postgresql"
    }
    
+```
+
 
 Бэкапы автоматически создаются:
 
