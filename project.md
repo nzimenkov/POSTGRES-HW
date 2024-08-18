@@ -72,7 +72,7 @@ ERROR: 2024/08/15 10:54:56.150550 failed to configure folder: No storage is conf
 совет чата gpt:
 
 конфиг файл слежующий:
-
+```
    {
      "WALG_FILE_PREFIX": "/var/backups/postgresql",
      "WALG_COMPRESSION_METHOD": "brotli",
@@ -82,7 +82,7 @@ ERROR: 2024/08/15 10:54:56.150550 failed to configure folder: No storage is conf
      "WALG_LOCAL_PREFIX": "/var/backups/postgresql"
    }
    
-
+```
 После этого не выдавал такую же ошибку, начал выдавать другую ошибку:
 
 ```
