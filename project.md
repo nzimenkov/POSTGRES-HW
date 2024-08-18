@@ -329,43 +329,38 @@ done
 
 Пока закомментим строки, но в будущем сделать их
 
-#"WALG_UPLOAD_CONCURRENCY" = 16
+###"WALG_UPLOAD_CONCURRENCY" = 16
 Количество потоков, по умолчанию равно 16
 
 
-
-#"WALG_UPLOAD_DISK_CONCURRENCY" = 1 
+###"WALG_UPLOAD_DISK_CONCURRENCY" = 1 
 количество параллельных потоков, считывающих диск
 
 
-# "TOTAL_BG_UPLOADED_LIMIT" = 32
+### "TOTAL_BG_UPLOADED_LIMIT" = 32
 Количество WAL файлов загруженных после одного сканирования
 
 
-
-
-#"WALG_PREVENT_WAL_OVERWRITE" = ? 
+###"WALG_PREVENT_WAL_OVERWRITE" = ? 
  Предотвращение перезаписи WAL файлов
 
 
-
-
-#"WALG_DELTA_MAX_STEPS" = 0
+###"WALG_DELTA_MAX_STEPS" = 0
 № Определяет, сколько дельта-резервных копий может быть между полными резервными копиями. По умолчанию 0.
 
 
 
-# WALG_DELTA_ORIGIN = "LATEST"
+### WALG_DELTA_ORIGIN = "LATEST"
 Для настройки базы для следующего резервного копирования дельты (только если WALG_DELTA_MAX_STEPSне превышено). WALG_DELTA_ORIGINможет быть LATEST (цепочка приращений), LATEST_FULL (для баз, где изменчивая часть компактна и цепочка не имеет смысла — дельты перезаписывают друг друга). По умолчанию LATEST
 
 
 
-# WALG_TAR_SIZE_THRESHOLD = 1 << 30 - 1
+### WALG_TAR_SIZE_THRESHOLD = 1 << 30 - 1
 Размер одного резервного пакета. По умолчанию 1Гб
 
 
 
-WALG_ALIVE_CHECK_INTERVAL
+###WALG_ALIVE_CHECK_INTERVAL
 Для управления частотой проверки WAL-G активности Postgres во время backup-push. Если проверка не пройдена, backup-push прекращается.
 
 Примеры:
