@@ -32,7 +32,7 @@ export USE_LZO=1
 make deps
 make pg_build
 main/pg/wal-g --version
-``
+```
 
 Пытаемся создать файл конфигурации, по идее его можно создать где угодно,  просто нужно указать его путь при запуске команды wal-g backup-push.
 
