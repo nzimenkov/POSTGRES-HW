@@ -307,11 +307,11 @@ DB_USER="postgres"
 DB_PASS="postgres"
 
 # Команда для вставки данных
-INSERT_CMD="psql -h $DB_HOST -d $DB_NAME -U $DB_USER -c 'INSERT INTO data (value1, value2) VALUES ($RANDOM, '$RANDOM');'"
+```INSERT_CMD="psql -h $DB_HOST -d $DB_NAME -U $DB_USER -c 'INSERT INTO data (value1, value2) VALUES ($RANDOM, '$RANDOM');'"```
 
 # Команда для удаления старых данных
-DELETE_CMD="psql -h $DB_HOST -d $DB_NAME -U $DB_USER -c 'DELETE FROM data WHERE timestamp < (NOW() - INTERVAL '5 minutes');'"
-
+```DELETE_CMD="psql -h $DB_HOST -d $DB_NAME -U $DB_USER -c 'DELETE FROM data WHERE timestamp < (NOW() - INTERVAL '5 minutes');'"```
+```
 while true; do
   # Вставка данных
   $INSERT_CMD
@@ -324,10 +324,9 @@ while true; do
   # Пауза на 1 минуту
   sleep 60
 done
+```
 
-
-
-Пока закомментим строки, но в будущем сделать их
+# Полезные настроки конфига
 
 ###"WALG_UPLOAD_CONCURRENCY" = 16
 Количество потоков, по умолчанию равно 16
